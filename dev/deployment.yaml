@@ -14,7 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        # image: manojnair/myapp:v1
-        image: nanajanashia/argocd-app:1.0
+        image: manojnair/myapp:v1
         ports:
         - containerPort: 8080
