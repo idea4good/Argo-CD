@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: manojnair/myapp:v1
+        image: manojnair/myapp:v2
         ports:
         - containerPort: 80
