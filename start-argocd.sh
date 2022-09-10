@@ -13,16 +13,13 @@ kubectl apply -f application.yaml
 echo -e "\e[44m Login myapp(http://localhost:3200/)\e[49m"
 
 error=`kubectl port-forward -n myapp svc/myapp-service 3200:3200 2>&1`
-echo --------------
-echo $error
-echo --------------
+echo ❌$error
 
-while [[ $error == *"interrupt"* ]]
+while [[ $error == *"container not running"* ]]
 do
+   echo 🤝Reconnect myapp
    error=`kubectl port-forward -n myapp svc/myapp-service 3200:3200 2>&1`
-   echo -------
-   echo $error
-   echo -------
+   echo ❌$error
 done
 
 minikube stop
