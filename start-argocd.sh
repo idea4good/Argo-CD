@@ -12,7 +12,9 @@ echo "***************"
 
 kubectl apply -f application.yaml
 echo -e "\e[44m Login myapp(http://localhost:3200/)\e[49m"
-kubectl port-forward -n myapp svc/myapp-service 3200:3200
+kubectl port-forward -n myapp svc/myapp-service 3200:3200 &
 
+sleep 3
+read -p "Press 'enter' to exit"
 minikube stop
 pkill dockerd
