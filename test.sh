@@ -11,6 +11,7 @@ kubectl get svc -n myapp
 
 kubectl get pods -n myapp
 
+kubectl edit deployment -n myapp myapp-deployment
 # test docker container
 # docker container run --name myapp -d -p 3200:80 manojnair/myapp:v1
 # echo "login myapp(http://localhost:3200/)"
