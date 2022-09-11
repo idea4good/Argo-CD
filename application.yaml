@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/blues-yang/Argo-CD.git
+    repoURL: https://github.com/idea4good/Argo-CD.git
     targetRevision: HEAD
     path: dev
   destination: 
